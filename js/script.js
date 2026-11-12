@@ -150,7 +150,8 @@ const monuments = [
     photo: "img/lisboa-mosteiro-dos-jeronimos.jpg",
     short: "Um grande símbolo da época das navegações portuguesas.",
     story: `Mandado construir durante o reinado de D. Manuel I, o Mosteiro dos Jerónimos é um dos grandes exemplos do estilo manuelino. Sua ornamentação apresenta elementos inspirados na natureza e no universo marítimo. O edifício está ligado ao período das navegações portuguesas.`,
-    note: "O Mosteiro dos Jerónimos integra a lista do Patrimônio Mundial da UNESCO desde 1983."
+    note: "O Mosteiro dos Jerónimos integra a lista do Patrimônio Mundial da UNESCO desde 1983.",
+    model: "./mosteiro/"
   },
   {
     title: "Torre de Belém",
@@ -160,7 +161,8 @@ const monuments = [
     photo: "img/torre-de-belem.jpg",
     short: "Uma fortificação histórica que protegia a entrada do porto de Lisboa.",
     story: `Construída junto ao rio Tejo, a Torre de Belém fazia parte do sistema defensivo de Lisboa. Com o tempo, tornou-se um símbolo das navegações portuguesas. Sua arquitetura combina funções militares com uma decoração detalhada do estilo manuelino.`,
-    note: "A Torre de Belém integra o Patrimônio Mundial da UNESCO desde 1983, juntamente com o Mosteiro dos Jerónimos."
+    note: "A Torre de Belém integra o Patrimônio Mundial da UNESCO desde 1983, juntamente com o Mosteiro dos Jerónimos.",
+    model: "./torre de belem/"
   },
   {
     title: "Mosteiro da Batalha",
@@ -170,7 +172,8 @@ const monuments = [
     photo: "img/mosteiroB.jpg",
     short: "Monumento ligado à vitória portuguesa na Batalha de Aljubarrota.",
     story: `D. João I mandou erguer o Mosteiro de Santa Maria da Vitória para celebrar a vitória portuguesa na Batalha de Aljubarrota, em 1385. O conjunto é uma referência do gótico português e inclui elementos manuelinos, além das célebres Capelas Imperfeitas.`,
-    note: "O Mosteiro da Batalha foi inscrito na lista do Patrimônio Mundial da UNESCO em 1983."
+    note: "O Mosteiro da Batalha foi inscrito na lista do Patrimônio Mundial da UNESCO em 1983.",
+    model: "./mosteiro da batalha/"
   },
   {
     title: "Convento de Cristo",
@@ -180,7 +183,8 @@ const monuments = [
     photo: "img/top_convento_de_cristo_de_tomar_5b05f68f39dcf.jpg",
     short: "Um conjunto monumental ligado aos Templários e à Ordem de Cristo.",
     story: `O conjunto monumental de Tomar nasceu ligado à Ordem dos Templários e foi ampliado ao longo de vários séculos. Reúne diferentes estilos arquitetônicos, incluindo elementos românicos, góticos, manuelinos e renascentistas. A famosa janela manuelina é um dos seus elementos mais conhecidos.`,
-    note: "O Convento de Cristo integra a lista do Patrimônio Mundial da UNESCO desde 1983."
+    note: "O Convento de Cristo integra a lista do Patrimônio Mundial da UNESCO desde 1983.",
+    model: "./convento de cristo/"
   },
   {
     title: "Palácio Nacional da Pena",
@@ -190,7 +194,8 @@ const monuments = [
     photo: "img/Sintra_-_Palacio_da_Pena_(20332995770).jpg",
     short: "Um palácio colorido que combina diferentes estilos arquitetônicos.",
     story: `D. Fernando II transformou as estruturas de um antigo mosteiro num palácio durante o século XIX. Suas torres, cores e misturas de estilos fazem dele um dos monumentos mais reconhecíveis de Portugal. O palácio está inserido numa paisagem cultural de grande importância.`,
-    note: "O Palácio da Pena faz parte da Paisagem Cultural de Sintra, inscrita pela UNESCO em 1995."
+    note: "O Palácio da Pena faz parte da Paisagem Cultural de Sintra, inscrita pela UNESCO em 1995.",
+    model: "./palacio da pena/"
   },
   {
     title: "Santuário do Bom Jesus do Monte",
@@ -200,7 +205,8 @@ const monuments = [
     photo: "img/santuarioBomJesus.jpg",
     short: "Santuário famoso pela escadaria monumental e pelo conjunto paisagístico.",
     story: `O Santuário do Bom Jesus do Monte desenvolveu-se ao longo de vários séculos. É conhecido pela escadaria monumental que conduz à basílica e representa uma subida simbólica de caráter espiritual. O conjunto inclui capelas, fontes, jardins e diferentes estilos arquitetônicos.`,
-    note: "O Santuário do Bom Jesus do Monte foi inscrito na lista do Patrimônio Mundial da UNESCO em 2019."
+    note: "O Santuário do Bom Jesus do Monte foi inscrito na lista do Patrimônio Mundial da UNESCO em 2019.",
+    model: "./santuario jesus/"
   }
 ];
 
@@ -318,7 +324,7 @@ function createCard(item, index, type) {
         : "Conhecer o prato";
 
   const modelTag = type === "monument"
-    ? '<div class="model-tag">◇ Espaço reservado para o modelo 3D</div>'
+    ? '<a class="model-tag" href="' + item.model + '" target="_blank">◇ Espaço reservado para o modelo 3D</a>'
     : "";
 
   card.innerHTML = `
